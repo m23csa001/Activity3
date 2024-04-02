@@ -15,7 +15,7 @@ from torch.utils.tensorboard import SummaryWriter
 transform = transforms.Compose([
    transforms.Resize((224, 224)),  # Resize images to fit ResNet101 input size
    transforms.ToTensor(),
-   transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
+   transforms.Normalize((0.1, 0.1, 0.1), (0.1, 0.1, 0.1)),
 ])
 
 
