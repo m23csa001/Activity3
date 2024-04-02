@@ -104,8 +104,8 @@ def top_k_accuracy(model, test_loader, k=5):
    return 100. * correct / total
 optimizers = {
    'Adam': optim.Adam(model.fc.parameters()),  # Only optimize fc layer parameters
-   #'Adagrad': optim.Adagrad(model.fc.parameters()),
-   #'Adadelta': optim.Adadelta(model.fc.parameters()),
+   'Adagrad': optim.Adagrad(model.fc.parameters()),
+   'Adadelta': optim.Adadelta(model.fc.parameters()),
 }
 for name, optimizer in optimizers.items():
    print(f"Training with {name}")
